@@ -136,10 +136,11 @@ transform = Transform( 0.0149038, 0.397376, -0.917535, -6.47481e-08, 0.917637, 0
 script = ExtResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="BPM"]
-transform = Transform( 1, 7.45058e-08, -5.96046e-08, 2.98023e-08, 1, -2.98023e-08, -1.78814e-07, -1.49012e-08, 1, -1.19209e-07, -0.050589, -2.38419e-07 )
+transform = Transform( 1, 7.45058e-08, -5.21541e-08, 2.98023e-08, 1, -2.98023e-08, -1.78814e-07, 1.19209e-07, 1, 0.0113984, 0.0441501, -0.792192 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="BPM"]
+transform = Transform( 1, 0, 7.45058e-09, 0, 1, 0, 0, 1.19209e-07, 1, 0.011398, 0.0947392, -0.792192 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
@@ -152,12 +153,12 @@ stream = ExtResource( 20 )
 bus = "Voice"
 
 [node name="OverrideBeats" parent="BPM" instance=ExtResource( 15 )]
-transform = Transform( -0.982105, 0.0147357, -0.187757, -0.0600452, 0.92041, 0.386317, 0.178506, 0.390677, -0.903054, -0.0119992, 0.27563, 0.160782 )
+transform = Transform( -0.982106, 0.0147357, -0.187757, -0.0600452, 0.92041, 0.386317, 0.178506, 0.390677, -0.903054, -0.000600815, 0.370369, -0.631409 )
 ontext = "Override beats"
 offtext = "Default beats"
 
 [node name="SongSelector" parent="." instance=ExtResource( 23 )]
-transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 1, 1.433, -0.393 )
+transform = Transform( -3.51533e-08, 0, -0.109, 0, 0.352517, 0, 0.295524, 0, 1.74709e-08, 0.818848, 1.44447, -0.328151 )
 
 [node name="SettingsCarousel" type="Spatial" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -2.3 )
@@ -182,10 +183,10 @@ transform = Transform( 1, -1.13687e-13, 8.47033e-21, 1.13687e-13, 1, 7.4607e-14,
 transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.19209e-07, 0, -0.225055 )
 
 [node name="GamePanel" parent="SettingsCarousel/Exercises" instance=ExtResource( 3 )]
-transform = Transform( -9.77524e-08, -1, 2.62268e-08, 0, -4.37114e-08, -0.6, 0.6, -1.62921e-07, 4.27289e-15, -1, 1.474, -0.148 )
+transform = Transform( -9.77524e-08, -1, 2.62268e-08, 0, -4.37114e-08, -0.6, 0.6, -1.62921e-07, 4.27289e-15, -1.19971, 1.474, -0.148002 )
 
 [node name="EnvironmentSelectionPanel" parent="SettingsCarousel/Exercises" instance=ExtResource( 43 )]
-transform = Transform( -8.02679e-08, -1, 8.74228e-09, 0, -4.37114e-08, -0.2, 0.2, -4.01339e-07, 3.50862e-15, -1, 1.0238, 0.152352 )
+transform = Transform( -8.02679e-08, -1, 8.74228e-09, 0, -4.37114e-08, -0.2, 0.2, -4.01339e-07, 3.50862e-15, -1.19971, 1.0238, 0.152349 )
 
 [node name="Battle" type="Spatial" parent="SettingsCarousel"]
 
@@ -281,15 +282,15 @@ mesh = SubResource( 11 )
 material/0 = ExtResource( 7 )
 
 [node name="ExerciseButton" parent="." instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.618245, 0.925931, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.618245, 0.925931, -0.80029 )
 ontext = "Exercises"
 
 [node name="ConnectionsButton" parent="." instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399424, 0.925931, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399424, 0.925931, -0.80029 )
 ontext = "Connect"
 
 [node name="BattleButton" parent="." instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399, 1.05413, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399, 1.05413, -0.80029 )
 ontext = "Battle"
 
 [node name="PlayerHeightAdjuster" parent="." instance=ExtResource( 26 )]
@@ -308,7 +309,7 @@ volume_db = -9.0
 transform = Transform( 2.84861e-14, 1, -1.62921e-07, -1, 1.91069e-15, -2.06632e-07, -2.06632e-07, 1.62921e-07, 1, -3.31028, 1.9648, 0.0695851 )
 
 [node name="MultiPanel" parent="." instance=ExtResource( 13 )]
-transform = Transform( -0.6, -2.38498e-08, 6.25503e-16, 0, -4.37114e-08, -0.6, 1.43098e-08, -1, 2.62268e-08, -0.145, 1.474, 1 )
+transform = Transform( -0.6, -2.38498e-08, 6.25503e-16, 0, -4.37114e-08, -0.6, 1.43098e-08, -1, 2.62268e-08, -0.145, 1.474, 0.579971 )
 
 [node name="Keyboard" parent="." instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.318969, 0 )
