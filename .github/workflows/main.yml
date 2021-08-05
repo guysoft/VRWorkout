@@ -31,3 +31,4 @@ jobs:
         relative_project_path: ./godot_project
       env:
         AGITHUB_TOKEN: ${{ secrets.AGITHUB_TOKEN }}
+        LANG: "en_US.UTF-8"
