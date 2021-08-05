@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - workflow
 
 jobs:
   # job id, can be anything
@@ -29,4 +30,4 @@ jobs:
         godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/3.3/rc9/mono/Godot_v3.3-rc9_mono_export_templates.tpz
         relative_project_path: ./
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        AGITHUB_TOKEN: ${{ secrets.AGITHUB_TOKEN }}
