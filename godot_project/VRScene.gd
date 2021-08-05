@@ -583,6 +583,7 @@ func start_levelselect():
 	levelselect.translation = Vector3(0,0,0)
 	levelselect.connect("level_selected",self,"_on_Area_level_selected")
 	levelselect.connect("onboarding_selected",self,"_on_Onboarding_selected")
+	print("AAAAA")
 	
 	add_child(levelselect)
 
@@ -820,7 +821,7 @@ func get_persisting_parameters():
 		
 var game_statistics = {}
 func _on_Area_level_selected(filename, diff, num):
-	GameVariables.vr_camera.blackout_screen(true)
+	# GameVariables.vr_camera.blackout_screen(true)
 	yield(get_tree().create_timer(0.1),"timeout")
 
 	if level == null:
@@ -909,6 +910,7 @@ func set_beast_mode(enabled):
 			t.set_beast_mode(enabled)
 
 func _on_Splashscreen_finished():
+	print("BBBBB")
 	GameVariables.vr_camera.blackout_screen(true)
 	yield(get_tree().create_timer(0.1),"timeout")
 
@@ -929,6 +931,9 @@ func _on_Splashscreen_finished():
 		add_child(levelselect)
 	else:
 		_on_Onboarding_selected()
+		print("CCCCC")
+	levelselect = levelselect_blueprint.instance()
+	add_child(levelselect)
 
 var onboarding_scene
 func _on_Onboarding_selected():

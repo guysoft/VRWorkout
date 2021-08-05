@@ -169,7 +169,7 @@ func tint_screen(duration):
 func blackout_screen(blackout):
 	if blackout:
 		print ("Blackout screen")
-		get_node("Blackout").show()
+		# get_node("Blackout").show()
 	else:
 		print ("Show screen")
 		get_node("Blackout").hide()

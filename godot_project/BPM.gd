@@ -19,7 +19,8 @@ func _ready():
 
 
 func update_text():
-	get_node("bpm_text").print_info("Hit to set bpm\nfor Freeplay\nBeats: %d / BPM: %d"%[beats,int(bpm)])
+	# get_node("bpm_text").print_info("Hit to set bpm\nfor Freeplay\nBeats: %d / BPM: %d"%[beats,int(bpm)])
+	get_node("bpm_text").print_info("")
 
 #If two beat call are more than 100msec apart then the beat is counted and
 #the average BPM is calculated
